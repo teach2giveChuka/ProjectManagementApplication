@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #222831; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+  display: flex;
+}
+
+.left {
+  height: 100vh;
+  width: 15vw;
+  background-color: #222831; /* Dark gray for the sidebar */
+}
+
+.innerLeft {
+  position: fixed;
+  margin-top: 40px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  gap: 40px;
+}
+.innerLeft ion-icon{
+  color: #00fff5;
+  font-size: 25px;
+}
+.neonion{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap :10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding :10px;
+  border-radius: 10px;
+}
+.neonion:hover,
+.neonion:focus {
+  transform: scale(1.04); /* Slightly enlarge on hover */
+  box-shadow: 0 0 4px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5; /* Neon glow effect */
+  background-color: #393E46; /* Dark blue background on hover */
+  border-right: none; /* Remove border on the right */
+  border-radius: 10px 0 0 10px; /* Adjust border-radius */
+}
+.leftAdmin{
+ color: #1d5654; /* Neon turquoise for the text color */
+  text-shadow: 0 0 5px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
+  font-size: 45px;
+}
+.right {
+  background-color: #222831; /* Dark blue background for the content area */
+  width: 100%;
+  margin-left: 50px;
+  
+}
+
+.innerRight {
+  margin-top: 30px;
+  border-top-left-radius: 20px;
+  background-color: #393E46; /* Neon blue for the profile section */
+  height: 100px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  /* border-top: 1px solid #00fff5; */
+  /* border-left: 1px solid #00FFF5 */
+}
+.adminName{
+  color: #00FFF5;
+  Font-size: 19px;
+}
+
+.iconStat{
+  font-size: 60px;
+  color: #00ADB5;
+}
+.statsContainer:hover .iconStat{
+  color: #00fff5;
+}
+.statsNumber{
+  color: #00FFF5;
+}
+.statContent{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: ; */
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person {
+  color: #00FFF5; /* Neon turquoise for the profile icon */
+  font-size: 70px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: -150px;
+}
+
+
+.quiti {
+  color: #00FFF5; /* Neon turquoise for the logout icon */
+  font-size: 22px;
+}
+
+.workSpace {
+  padding-top: 50px;
+  background-color: #393E46; /* Dark blue background for the workspace */
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats {
+  background-color: #393E46; /* Dark gray for the stats section */
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.statsContainer {
+  background-color: #222831; /* Neon blue for the stat boxes */
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 30px; */
+  width: 250px;
+  height: 180px;
+  /* border: 2px solid #00FFF5; Neon turquoise border */
+  box-shadow: 0 0 20px 5px #00ADB5;
+  /* transform: ; */
+}
+
+.statsContainer:hover{
+  box-shadow: 0 0 20px 5px #00FFF5;
+}
+
+.statsNumber {
+  font-size: 50px;
+}
+
+.new {
+  margin-top: 50px;
+}
+
+.newP {
+  margin-left: 15%;
+  margin: 30px 15% 30px;
+  display: flex;
+  width: fit-content;
+  padding: 10px;
+  border-bottom: 3px solid #00FFF5; /* Neon turquoise border */
+  font-size: 20px;
+}
+
+.projectForm {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #393E46; /* Dark gray for the project form */
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: #222831; /* Dark blue background for the form */
+  padding: 30px;
+  border-radius: 20px;
+  gap: 15px;
+  box-shadow: 0 0 20px 5px #00FFF5;
+}
+
+form input {
+  padding: 10px 15px;
+  background-color: #222831; /* Neon blue for the input fields */
+  color: #ffffff; /* White text */
+  border: 1px solid #00FFF5;
+  border-radius: 5px;
+}
+
+.formButton {
+  display: flex;
+  justify-content: center;
+}
+
+.formButton button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #00ADB5; /* Neon turquoise for the buttons */
+  box-shadow: 0 0 20px 2px #00ADB5;
+  color: #000000; /* Dark blue text */
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+.formButton button:hover {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #00FFF5; /* Neon turquoise for the buttons */
+  box-shadow: 0 0 20px 2px #00FFF5;
+  color: #000000; /* Dark blue text */
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.exit {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #f35353; /* Red */
+  font-size: 30px;
+}
+
+.exit ion-icon {
+  cursor: pointer;
+}
+
+.projects{
+  font-size: 11px;
+  
+}
+
+.projectAssign {
+  background-color: #F0F8FF; /* Alice blue */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Table styles */
+.projects h2 {
+  color: #ffffff;
+  margin-top: 20px;
+  background-color: #222831; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #222831; 
+
+.project-table th{
+  border-bottom: 2px solid #00ADB5;
+  background-color: #1d232d;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.project-table td {
+   /* border: 1px solid #00ADB5;
+   */
+   /* border-bottom: 2px solid #04969e; */
+  padding: 8px;
+}
+
+.project-table th {
+  color: #ffffff; /* White text */
+  text-align: left;
+}
+
+.project-table tr:nth-child(even) {
+  background-color: #393E46;;
+}
+
+.project-table tr:hover {
+  background-color: unset; 
+}

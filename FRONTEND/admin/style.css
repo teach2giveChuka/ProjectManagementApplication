@@ -42,21 +42,20 @@ body {
   padding :10px;
   border-radius: 10px;
 }
-.neonion:hover,
-.neonion:focus {
-  transform: scale(1.04); /* Slightly enlarge on hover */
-  box-shadow: 0 0 4px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5; /* Neon glow effect */
-  background-color: #393E46; /* Dark blue background on hover */
-  border-right: none; /* Remove border on the right */
-  border-radius: 10px 0 0 10px; /* Adjust border-radius */
+.neonion:hover {
+  transform: scale(1.04); 
+  box-shadow: 0 0 4px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5; 
+  background-color: #393E46;
+  border-right: none; 
+  border-radius: 10px 0 0 10px;
 }
 .leftAdmin{
- color: #1d5654; /* Neon turquoise for the text color */
+ color: #1d5654; 
   text-shadow: 0 0 5px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
   font-size: 45px;
 }
 .right {
-  background-color: #222831; /* Dark blue background for the content area */
+  background-color: #222831; 
   width: 100%;
   margin-left: 50px;
   
@@ -65,7 +64,7 @@ body {
 .innerRight {
   margin-top: 30px;
   border-top-left-radius: 20px;
-  background-color: #393E46; /* Neon blue for the profile section */
+  background-color: #393E46; 
   height: 100px;
   padding: 15px 30px;
   display: flex;
@@ -110,7 +109,7 @@ body {
 }
 
 .person {
-  color: #00FFF5; /* Neon turquoise for the profile icon */
+  color: #00FFF5; 
   font-size: 70px;
 }
 
@@ -145,7 +144,7 @@ body {
 }
 
 .statsContainer {
-  background-color: #222831; /* Neon blue for the stat boxes */
+  background-color: #222831; 
   border-radius: 15px;
   display: flex;
   justify-content: space-evenly;
@@ -155,6 +154,7 @@ body {
   height: 180px;
   /* border: 2px solid #00FFF5; Neon turquoise border */
   box-shadow: 0 0 20px 5px #00ADB5;
+  transition: box-shadow 0.3s ease;
   /* transform: ; */
 }
 
@@ -176,8 +176,27 @@ body {
   display: flex;
   width: fit-content;
   padding: 10px;
-  border-bottom: 3px solid #00FFF5; /* Neon turquoise border */
+  border-bottom: 3px solid #00FFF5; 
   font-size: 20px;
+  
+}
+
+.newP ion-icon{
+  font-size: 30px;
+  color: #00ADB5;
+  box-shadow: 0 0 20px 5px #222831;
+}
+.addNew{
+  background-color: transparent;
+  transition: transform  0.3s ease ;
+  border: none;
+}
+.addNew:hover{
+  transform: scale(1.1);
+}
+.addNew ion-icon:hover{
+  transform: scale(1.1);
+  color: #00FFF5; 
 }
 
 .projectForm {
@@ -186,6 +205,9 @@ body {
   background-color: #393E46; /* Dark gray for the project form */
   display: flex;
   justify-content: center;
+}
+.formNew{
+  display: none;
 }
 
 form {
@@ -236,7 +258,7 @@ form input {
 .exit {
   display: flex;
   flex-direction: row-reverse;
-  color: #f35353; /* Red */
+  color: #f35353; 
   font-size: 30px;
 }
 
@@ -270,7 +292,7 @@ form input {
   width: 90%;
   border-collapse: collapse;
   margin-top: 10px;
-  background-color: #222831; 
+  background-color: #222831; }
 
 .project-table th{
   border-bottom: 2px solid #00ADB5;
@@ -291,9 +313,22 @@ form input {
 }
 
 .project-table tr:nth-child(even) {
-  background-color: #393E46;
+  /* background-color: #393E46; */
+  border-bottom: 1px solid #00ADB5;
 }
 
 .project-table tr:hover {
-  background-color: unset; 
+  /* background-color: unset;  */
 }
+.tables{
+  display: flex;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+.error {
+  color: #f35353; /* Red color for error messages */
+  display: block; /* Ensure the error message is displayed */
+  font-size: 14px;
+  margin-top: 5px;
+}
+

@@ -1,12 +1,13 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #393E46; /* Dark blue from previous scheme */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
 }
+
 .login-container {
   background-color: #fff;
   border-radius: 8px;
@@ -15,18 +16,22 @@ body {
   padding: 40px;
   text-align: center;
 }
+
 h2 {
   margin-bottom: 40px;
-  color: #333;
+  color: #222831; /* Lighter blue from previous scheme */
 }
+
 .input-group {
   margin-bottom: 20px;
 }
+
 input[type="text"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder {
   transition: all 0.3s ease;
 }
+
 input[type="text"]:hover::-webkit-input-placeholder,
 input[type="email"]:hover::-webkit-input-placeholder,
 input[type="password"]:hover::-webkit-input-placeholder {
@@ -35,6 +40,7 @@ input[type="password"]:hover::-webkit-input-placeholder {
   margin-top: 10px;
   color: #888;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -45,28 +51,32 @@ input[type="password"] {
   background-color: transparent;
   outline: none;
   font-size: 16px;
-  color: #333;
+  color: #222831; /* Lighter blue from previous scheme */
   transition: border-bottom-color 0.3s ease;
 }
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-  border-bottom-color: #007bff;
+  border-bottom-color: #00ADB5; /* Bright blue from previous scheme */
 }
+
 button {
   width: 100%;
   padding: 12px 0;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
+  background-color: #00ADB5; 
   color: #fff;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 button:hover {
-  background-color: #0056b3;
+  background-color: #007bff;
 }
+
 .extra-options {
   display: flex;
   justify-content: space-between;
@@ -74,10 +84,12 @@ button:hover {
   margin-top: 20px;
   font-size: 14px;
 }
+
 .forgot-password {
-  color: #007bff;
+  color: #00ADB5;
   text-decoration: none;
 }
+
 .forgot-password:hover {
   text-decoration: underline;
 }

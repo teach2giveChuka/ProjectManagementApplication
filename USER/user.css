@@ -34,7 +34,7 @@
     width: 18%;
     border-radius: 10px;
     color: aliceblue;
-    box-shadow: 0 4px  8px #00FFF5;
+    box-shadow: 0 0 20px  5px #00FFF5;
 
 }
 
@@ -62,7 +62,7 @@
     
     width: 60%;
     border-radius: 10px;
-    box-shadow: 0 4px  8px #00FFF5;
+    box-shadow: 0 0 20px  5px #00FFF5;
 
 }
 
@@ -73,7 +73,7 @@
 .contact{
     padding: 20px;
     background-color: #222831;
-    box-shadow: 0 4px  8px #00FFF5;
+    box-shadow: 0 0 20px  5px #00FFF5;
     height: 20vh;
     color: white;
     
@@ -82,7 +82,7 @@
 .completedTasks{
 
     width: 25%;
-    box-shadow: 0 4px  8px #00FFF5;
+    box-shadow: 0 0 20px  5px #00FFF5;
     border-radius: 10px;
    display: flex;
    justify-content: center;
@@ -134,10 +134,4 @@
     display: flex;
     gap: 10px;
 }
- .profile{
-    
- }
-
- .profilediv{
-   
- }
+ 

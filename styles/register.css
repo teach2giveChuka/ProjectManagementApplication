@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #393E46; /* Dark blue from previous scheme */
+  background-color: #393E46;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ body {
 
 h2 {
   margin-bottom: 40px;
-  color: #222831; /* Lighter blue from previous scheme */
+  color: #222831;
 }
 
 .input-group {
@@ -51,14 +51,14 @@ input[type="password"] {
   background-color: transparent;
   outline: none;
   font-size: 16px;
-  color: #222831; /* Lighter blue from previous scheme */
+  color: #222831;
   transition: border-bottom-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-  border-bottom-color: #00ADB5; /* Bright blue from previous scheme */
+  border-bottom-color: #00ADB5;
 }
 
 button {

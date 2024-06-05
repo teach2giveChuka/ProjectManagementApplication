@@ -1,0 +1,105 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #393E46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background-color: #222831;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #00ADB5;
+  width: 400px;
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 40px;
+  color: white;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="email"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder {
+  transition: all 0.3s ease;
+}
+
+input[type="email"]:hover::-webkit-input-placeholder,
+input[type="password"]:hover::-webkit-input-placeholder {
+  transform: translateY(-10px);
+  font-size: 12px;
+  margin-top: 10px;
+  color: #888;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  transition: border-bottom-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-bottom-color: #00ADB5;
+}
+
+button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #00ADB5;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00FFF5;
+  color: rgb(56, 56, 56);
+}
+
+.extra-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.extra-options span a{
+  color: #00ADB5;
+}
+
+.forgot-password {
+  color: #00ADB5;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.inputError{
+  color: red;
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

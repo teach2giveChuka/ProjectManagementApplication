@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <link rel="stylesheet" href="/FRONTEND/styles/login.css">
+    <link rel="stylesheet" href="/ProjectManagementApplication/FRONTEND/styles/login.css">
 </head>
 <body>
     <div class="login-container">
         <h2>Welcome Back!</h2>
         <form id="loginForm">
             <div class="input-group">
-                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="email" id="username" name="username" placeholder="email">
             </div>
             <div class="input-group">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="password" name="password" placeholder="Password">
             </div>
             <button type="submit">Login</button>
             <div class="extra-options">
@@ -29,5 +29,6 @@
           <span>Do not have an account? <a href="register.html">Register here</a></span>
       </div>
     </div>
+    <script src="/ProjectManagementApplication/FRONTEND/dist/login.js"></script>
 </body>
 </html>

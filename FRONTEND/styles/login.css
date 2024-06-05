@@ -9,9 +9,10 @@ body {
 }
 
 .login-container {
-  background-color: #fff;
+  background-color: #222831;
+  color: white;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px #00ADB5;
   width: 400px;
   padding: 40px;
   text-align: center;
@@ -19,19 +20,19 @@ body {
 
 h2 {
   margin-bottom: 40px;
-  color: #222831;
+  color: white;
 }
 
 .input-group {
   margin-bottom: 20px;
 }
 
-input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder {
   transition: all 0.3s ease;
 }
 
-input[type="text"]:hover::-webkit-input-placeholder,
+input[type="email"]:hover::-webkit-input-placeholder,
 input[type="password"]:hover::-webkit-input-placeholder {
   transform: translateY(-10px);
   font-size: 12px;
@@ -39,7 +40,7 @@ input[type="password"]:hover::-webkit-input-placeholder {
   color: #888;
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
   width: calc(100% - 20px);
   padding: 10px;
@@ -48,11 +49,11 @@ input[type="password"] {
   background-color: transparent;
   outline: none;
   font-size: 16px;
-  color: #222831;
+  color: white;
   transition: border-bottom-color 0.3s ease;
 }
 
-input[type="text"]:focus,
+input[type="email"]:focus,
 input[type="password"]:focus {
   border-bottom-color: #00ADB5;
 }
@@ -70,7 +71,8 @@ button {
 }
 
 button:hover {
-  background-color: #007bff;
+  background-color: #00FFF5;
+  color: rgb(56, 56, 56);
 }
 
 .extra-options {
@@ -81,6 +83,10 @@ button:hover {
   font-size: 14px;
 }
 
+.extra-options span a{
+  color: #00ADB5;
+}
+
 .forgot-password {
   color: #00ADB5;
   text-decoration: none;
@@ -88,4 +94,12 @@ button:hover {
 
 .forgot-password:hover {
   text-decoration: underline;
+}
+
+.inputError{
+  color: red;
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

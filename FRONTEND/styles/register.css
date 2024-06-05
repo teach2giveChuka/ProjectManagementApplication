@@ -9,9 +9,10 @@ body {
 }
 
 .login-container {
-  background-color: #fff;
+  background-color: #222831;
+  color: white;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px 5px #00ADB5;
   width: 400px;
   padding: 40px;
   text-align: center;
@@ -19,7 +20,7 @@ body {
 
 h2 {
   margin-bottom: 40px;
-  color: #222831;
+  color: white;
 }
 
 .input-group {
@@ -35,7 +36,7 @@ input[type="password"]::-webkit-input-placeholder {
 input[type="text"]:hover::-webkit-input-placeholder,
 input[type="email"]:hover::-webkit-input-placeholder,
 input[type="password"]:hover::-webkit-input-placeholder {
-  transform: translateY(-10px);
+  transform: translateY(-10%);
   font-size: 12px;
   margin-top: 10px;
   color: #888;
@@ -51,7 +52,7 @@ input[type="password"] {
   background-color: transparent;
   outline: none;
   font-size: 16px;
-  color: #222831;
+  color: white;
   transition: border-bottom-color 0.3s ease;
 }
 
@@ -74,7 +75,8 @@ button {
 }
 
 button:hover {
-  background-color: #007bff;
+  background-color: #00FFF5;
+  color: rgb(56, 56, 56);
 }
 
 .extra-options {
@@ -85,6 +87,10 @@ button:hover {
   font-size: 14px;
 }
 
+.extra-options span a{
+  color: #00ADB5;
+}
+
 .forgot-password {
   color: #00ADB5;
   text-decoration: none;
@@ -92,4 +98,12 @@ button:hover {
 
 .forgot-password:hover {
   text-decoration: underline;
+}
+
+.inputError{
+  color: red;
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

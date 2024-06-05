@@ -1,317 +1,751 @@
 * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  body {
-    background-color: #222831;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .main {
-    display: flex;
-  }
-  
-  .left {
-    height: 100vh;
-    width: 15vw;
-    background-color: #222831;
-  }
-  
-  .innerLeft {
-    position: fixed;
-    margin-top: 40px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
-    gap: 40px;
-  }
-  
-  .innerLeft ion-icon {
-    color: #00fff5;
-    font-size: 25px;
-  }
-  
-  .neonion {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .neonion:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 4px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
-    background-color: #393E46;
-    border-right: none;
-    border-radius: 10px 0 0 10px;
-  }
-  
-  .leftAdmin {
-    color: #1d5654;
-    text-shadow: 0 0 5px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
-    font-size: 45px;
-  }
-  
-  .right {
-    background-color: #222831;
-    width: 100%;
-    margin-left: 40px;
-    /* margin-top: 50px; */
-  }
-  .statstxt{
-    margin-top: 45px;
-    font-size: larger;
-  }
-  
-  .innerRight {
-    margin-top: 40px;
-    /* border: 2px solid #00ADB5; */
-    border-top-left-radius: 20px;
-    background-color: #393E46;
-    /* height: 100px; */
-    padding: 15px 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  
-  .adminName {
-    color: #00FFF5;
-    font-size: 19px;
-  }
-  
-  .iconStat {
-    font-size: 30px;
-    color: #00ADB5;
-  }
-  
-  .statsContainer:hover .iconStat {
-    color: #00fff5;
-  }
-  
-  .statsNumber {
-    color: #00FFF5;
-  }
-  
-  .statContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .profile {
-    /* background-color: #000000; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .profileUser {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .person {
-    color: #00FFF5;
-    font-size: 70px;
-  }
-  
-  .logout {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-right: -150px;
-  }
-  
-  .quiti {
-    color: #00FFF5;
-    font-size: 22px;
-  }
-  
-  .workSpace {
-    padding-top: 50px;
-    background-color: #393E46;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  
-  .stats {
-    margin-top: 30px;
-    box-sizing: content-box;
-    background-color: #393E46;
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-
-    height: 100%;
-    width: 100%;
-    /* background-color: #00fff5; */
-  }
-  
-  .statsContainer {
-    background-color: #222831;
-    gap: 10px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 200px;
-    height: 100px;
-    box-shadow: 0 0 20px 5px #00ADB5;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .statsContainer:hover {
-    box-shadow: 0 0 20px 5px #00FFF5;
-  }
-  
-  .statsNumber {
-    font-size: 25px;
-  }
-
-
-  
-  .new {
-    margin-top: 50px;
-  }
-  
-  .newP {
-    margin-left: 15%;
-    margin: 30px 15% 30px;
-    display: flex;
-    width: fit-content;
-    padding: 10px;
-    border-bottom: 3px solid #00FFF5;
-    font-size: 20px;
-  }
-  
- 
-  .taskArea{
-    height: 350px;
-    width: 100%;
-    /* background-color: #1d5654; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .taskDEtails, .taskProgress, .dOneTasks{
-    height: 400px;
-    width: 350px;
-    background-color: #222831;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .taskDEtails{
-    /* background-color: #00FFF5; */
-    justify-content: space-around;
-    
-  }
-  .det{
-    display: flex;
-
-  }
-  .det .P{
-    color: #00fff5;
-  }
-  .imgTemp{
-    height: 100px;
-    width: 220px;
-  }
-  .timerimg{
-    height: 150px;
-    width: 220px;
-  }
-  
-  .projects {
-    font-size: 11px;
-  }
-  
-  .projectAssign {
-    background-color: #F0F8FF;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .dOneTasks{
-    justify-content: center;
-    align-items: center;
-    /* background-color: #00FFF5; */
-  }
-  .tables{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .projects h2 {
-    color: #ffffff;
-    margin-top: 20px;
-    background-color: #222831;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .project-table {
-    width: 90%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    background-color: #222831;
-  }
-  
-  .project-table th {
-    border-bottom: 2px solid #00ADB5;
-    background-color: #1d232d;
-    padding: 10px;
-    margin-bottom: 5px;
-  }
-  
-  .project-table td {
-    padding: 8px;
-  }
-  
-  .project-table th {
-    color: #ffffff;
-    text-align: left;
-  }
-  
-  .project-table tr:nth-child(even) {
-    border-bottom: 1px solid #00ADB5;
-  }
-  
-  .error {
-    color: #f35353;
-    display: block;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-
-  @media screen and (max-width: 842px) {
-    .innerRight {
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        /* background-color: #00FFF5; */
-    }
+  padding: 0;
+  margin: 0;
 }
-  
+
+body {
+  background-color: #222831;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+  display: flex;
+}
+
+.left {
+  height: 100vh;
+  width: 15vw;
+  background-color: #222831;
+}
+
+.innerLeft {
+  position: fixed;
+  margin-top: 40px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  gap: 40px;
+}
+
+.innerLeft ion-icon {
+  color: #00fff5;
+  font-size: 25px;
+}
+
+.neonion {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.neonion:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 4px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
+  background-color: #393E46;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.leftAdmin {
+  color: #1d5654;
+  text-shadow: 0 0 5px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
+  font-size: 45px;
+}
+
+.right {
+  background-color: #222831;
+  width: 100%;
+  margin-left: 40px;
+  /* margin-top: 50px; */
+}
+.statstxt{
+  margin-top: 45px;
+  font-size: larger;
+}
+
+.innerRight {
+  margin-top: 40px;
+  /* border: 2px solid #00ADB5; */
+  border-top-left-radius: 20px;
+  background-color: #393E46;
+  /* height: 100px; */
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.adminName {
+  color: #00FFF5;
+  font-size: 19px;
+}
+
+.iconStat {
+  font-size: 30px;
+  color: #00ADB5;
+}
+
+.statsContainer:hover .iconStat {
+  color: #00fff5;
+}
+
+.statsNumber {
+  color: #00FFF5;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  /* background-color: #000000; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person {
+  color: #00FFF5;
+  font-size: 70px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: -150px;
+}
+
+.quiti {
+  color: #00FFF5;
+  font-size: 22px;
+}
+
+.workSpace {
+  padding-top: 50px;
+  background-color: #393E46;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.stats {
+  margin-top: 30px;
+  box-sizing: content-box;
+  background-color: #393E46;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+
+  height: 100%;
+  width: 100%;
+  /* background-color: #00fff5; */
+}
+
+.statsContainer {
+  background-color: #222831;
+  gap: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  box-shadow: 0 0 20px 5px #00ADB5;
+  transition: box-shadow 0.3s ease;
+}
+
+.statsContainer:hover {
+  box-shadow: 0 0 20px 5px #00FFF5;
+}
+
+.statsNumber {
+  font-size: 25px;
+}
+
+
+
+.new {
+  margin-top: 50px;
+}
+
+.newP {
+  margin-left: 15%;
+  margin: 30px 15% 30px;
+  display: flex;
+  width: fit-content;
+  padding: 10px;
+  border-bottom: 3px solid #00FFF5;
+  font-size: 20px;
+}
+
+
+.taskArea{
+  height: 350px;
+  width: 100%;
+  /* background-color: #1d5654; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.taskDEtails, .taskProgress, .dOneTasks{
+  height: 400px;
+  width: 350px;
+  background-color: #222831;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.taskDEtails{
+  /* background-color: #00FFF5; */
+  justify-content: space-around;
+ 
+}
+.det{
+  display: flex;
+
+}
+.det .P{
+  color: #00fff5;
+}
+.imgTemp{
+  height: 100px;
+  width: 220px;
+}
+.timerimg{
+  height: 150px;
+  width: 220px;
+}
+
+.projects {
+  font-size: 11px;
+}
+
+.projectAssign {
+  background-color: #F0F8FF;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dOneTasks{
+  justify-content: center;
+  align-items: center;
+  /* background-color: #00FFF5; */
+}
+.tables{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects h2 {
+  color: #ffffff;
+  margin-top: 20px;
+  background-color: #222831;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #222831;
+}
+
+.project-table th {
+  border-bottom: 2px solid #00ADB5;
+  background-color: #1d232d;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.project-table td {
+  padding: 8px;
+}
+
+.project-table th {
+  color: #ffffff;
+  text-align: left;
+}
+
+.project-table tr:nth-child(even) {
+  border-bottom: 1px solid #00ADB5;
+}
+
+.error {
+  color: #f35353;
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 842px) {
+  .innerRight {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* background-color: #00FFF5; */
+  }
+}
+
+@media screen and (max-width: 355px) {
+.left {
+  width: 100%;
+  height: auto;
+}
+
+.innerLeft {
+  flex-direction: row;
+  /* justify-content: space-between; */
+  margin-left: 10px;
+  padding: 10px;
+  gap: 10px;
+  font-size: 14px;
+ 
+}
+
+.neonion {
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aqua; */
+}
+
+.leftAdmin {
+  font-size: 30px;
+  text-align: center;
+}
+.neonion ion-icon{
+  height: px;
+ 
+}
+
+.statstxt{
+margin-right: 90%;
+}
+
+
+.profile {
+  order: -1;
+  width: 100%;
+  background-color: #222831;
+  padding: 10px 0;
+}
+
+.right {
+  margin-left: 0;
+  margin-top: 10px;
+  width: 100%;
+ 
+}
+
+.innerRight {
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+.adminName {
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+.statContent {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+ 
+}
+
+
+.profileUser {
+  flex-direction: column;
+  align-items: center;
+}
+
+.person {
+  font-size: 50px;
+}
+
+.logout {
+  margin-right: 0;
+  justify-content: center;
+}
+
+.quiti {
+  font-size: 18px;
+}
+
+.workSpace {
+  padding-top: 20px;
+}
+
+.stats {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.statsContainer {
+  width: 85%;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.statsNumber {
+  font-size: 20px;
+}
+
+.newP {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.taskArea {
+  flex-direction: column;
+  height: auto;
+}
+
+.taskDEtails{
+  gap: 10px;
+  border-radius: 5px;
+ 
+}
+
+.taskDEtails, .taskProgress, .dOneTasks {
+  width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.det .P {
+  font-size: 14px;
+}
+
+.imgTemp, .timerimg {
+  width: 100%;
+  height: auto;
+}
+
+.project-table {
+  width: 100%;
+}
+
+}
+
+@media screen and (min-width: 356px) and (max-width: 500px) {
+.left {
+  width: 100%;
+  height: auto;
+}
+
+.innerLeft {
+  flex-direction: row;
+  margin-left: 10px;
+  padding: 10px;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.neonion {
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftAdmin {
+  font-size: 30px;
+  text-align: center;
+}
+
+.statstxt {
+  margin-right: 90%;
+}
+
+.profile {
+  order: -1;
+  width: 100%;
+  background-color: #222831;
+  padding: 10px 0;
+}
+
+.right {
+  margin-left: 0;
+  margin-top: 10px;
+  width: 100%;
+ 
+ 
+}
+
+.innerRight {
+  width: 100vw;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+.adminName {
+  font-size: 16px;
+  text-align: center;
+}
+
+.statContent {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.profileUser {
+  flex-direction: column;
+  align-items: center;
+}
+
+.person {
+  font-size: 50px;
+}
+
+.logout {
+  margin-right: 0;
+  justify-content: center;
+}
+
+.quiti {
+  font-size: 18px;
+}
+
+.workSpace {
+  padding-top: 20px;
+}
+
+.stats {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.statsContainer {
+  width: 85%;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.statsNumber {
+  font-size: 20px;
+}
+
+.newP {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.taskArea {
+  flex-direction: column;
+  height: auto;
+}
+
+.taskDEtails {
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.taskDEtails, .taskProgress, .dOneTasks {
+  width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.det .P {
+  font-size: 14px;
+}
+
+.imgTemp, .timerimg {
+  width: 100%;
+  height: auto;
+}
+
+.project-table {
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 700px) {
+.left {
+  width: 100%;
+  height: auto;
+}
+
+.innerLeft {
+  flex-direction: row;
+  margin-left: 10px;
+  padding: 10px;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.neonion {
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.neonion ion-icon{
+  height: 30px;
+}
+
+.leftAdmin {
+  font-size: 30px;
+  text-align: center;
+}
+
+.statstxt {
+  margin-right: 80%;
+}
+
+.profile {
+  order: -1;
+  width: 100%;
+  background-color: #222831;
+  padding: 10px 0;
+}
+
+.right {
+  margin-left: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.innerRight {
+  width: 100vw;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+.adminName {
+  font-size: 16px;
+  text-align: center;
+}
+
+.statContent {
+  height: 10vh;
+  font-size: 20px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+  width: 90%;
+}
+
+.statsNumber{
+  font-size: 50px;
+}
+.profileUser {
+  flex-direction: column;
+  align-items: center;
+}
+
+.person {
+  font-size: 50px;
+}
+
+.logout {
+  margin-right: 0;
+  justify-content: center;
+}
+
+.quiti {
+  font-size: 18px;
+}
+
+.workSpace {
+  padding-top: 20px;
+}
+
+.stats {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.statsContainer {
+  width: 85%;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.statsNumber {
+  font-size: 20px;
+}
+
+.newP {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.taskArea {
+  flex-direction: column;
+  height: auto;
+}
+
+.taskDEtails {
+  gap: 10px;
+ 
+}
+
+.taskDEtails, .taskProgress, .dOneTasks {
+  width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.det .P {
+  font-size: 14px;
+}
+
+.imgTemp, .timerimg {
+  width: 100%;
+  height: auto;
+}
+
+.project-table {
+  width: 100%;
+}
+}

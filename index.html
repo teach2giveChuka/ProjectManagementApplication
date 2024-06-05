@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProjectPulse</title>
+  <link rel="icon" href="images/project-management.png" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">ProjectPulse</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.html" class="no-smooth-scroll">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1><span class="animated-text">Welcome to ProjectPulse</span></h1>
+      <p>Your ultimate project management tool.</p>
+      <a href="register.html" class="cta">Get Started</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We provide a comprehensive solution for managing your projects, ensuring efficiency and productivity. Join us to take your project management to the next level.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature-item">
+        <h3>Comprehensive Dashboard</h3>
+        <p>Get a bird&#x27;s-eye view of all your projects with detailed statistics and visual charts.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Task Assignment & Management</h3>
+        <p>Easily assign tasks to team members and monitor their progress.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Real-Time Notifications</h3>
+        <p>Stay updated with instant notifications for task assignments and project updates.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Time Tracking</h3>
+        <p>Log hours worked on each project or task, ensuring efficient time management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or need support? Reach out to us through the form below.</p>
+      <form action="#" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="cta">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 ProjectPulse. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Smooth Scroll JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('header nav ul li a:not(.no-smooth-scroll)');
+
+      links.forEach(link => {
+        link.addEventListener('click', smoothScroll);
+      });
+
+      function smoothScroll(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const offsetTop = document.querySelector(href).offsetTop;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

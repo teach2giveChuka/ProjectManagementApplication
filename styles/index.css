@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222831; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #393E46;
+}
+
+.logo {
+  font-size: 28px;
+  color: #00FFF5;
+  text-shadow: 0 0 5px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #00FFF5;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/images/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg') no-repeat center center/cover;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(34, 40, 49, 0.8);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 5px #00ADB5;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.cta {
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #00ADB5;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #00FFF5;
+}
+
+.about {
+  padding: 50px 20px;
+  background-color: #393E46;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 20px;
+}
+
+.features {
+  padding: 50px 20px;
+  background-color: #222831;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.feature-item {
+  margin-bottom: 30px;
+}
+
+.feature-item h3 {
+  font-size: 28px;
+  color: #00FFF5;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 18px;
+}
+
+.contact {
+  padding: 50px 20px;
+  background-color: #393E46;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222831;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.contact-form button.cta {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ADB5;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.cta:hover {
+  background-color: #00FFF5;
+}
+
+footer {
+  background-color: #222831;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #ffffff;
+}
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-text {
+  display: inline-block;
+  animation: textAnimation 3s ease-in-out forwards;
+}

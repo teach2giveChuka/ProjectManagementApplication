@@ -203,3 +203,141 @@ footer p {
   display: inline-block;
   animation: textAnimation 3s ease-in-out forwards;
 }
+/* Media Queries */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .about h2, .features h2, .contact h2 {
+    font-size: 32px;
+  }
+
+  .about p, .features p, .contact p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .hero-content {
+    padding: 40px;
+  }
+
+  .cta {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .about, .features, .contact {
+    padding: 40px 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .about h2, .features h2, .contact h2 {
+    font-size: 28px;
+  }
+
+  .about p, .features p, .contact p {
+    font-size: 16px;
+  }
+
+  .feature-item h3 {
+    font-size: 24px;
+  }
+
+  .feature-item p {
+    font-size: 16px;
+  }
+
+  .contact-form input, .contact-form textarea {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .navbar ul {
+    gap: 5px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .hero-content {
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .about h2, .features h2, .contact h2 {
+    font-size: 24px;
+  }
+
+  .about p, .features p, .contact p {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    padding: 0 10px;
+  }
+
+  .contact-form input, .contact-form textarea {
+    padding: 8px;
+  }
+}

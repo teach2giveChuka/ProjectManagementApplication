@@ -6,29 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #00d9ff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #00fbff22
+    }
+  </style>
 </head>
 
 <body>
   <div class="main">
     <div class="left">
+      <button class="showNav"><ion-icon name="reorder-four-outline"></ion-icon></button>
       <div class="innerLeft">
         <h1 class="leftAdmin">SUDO</h1>
-        <div class="neonion" id="dashboard"><ion-icon name="list-outline"></ion-icon>
+
+        <div class="neonion" id="dashboard">
+          <ion-icon name="list-outline"></ion-icon>
           <p>Dashboard</p>
         </div>
-        <div class="neonion" id="leftcreateProject"> <ion-icon name="duplicate-outline"></ion-icon>
+        <div class="neonion" id="leftcreateProject">
+          <ion-icon name="duplicate-outline"></ion-icon>
           <p>Create project</p>
         </div>
-        <div class="neonion" id="leftUnassignedProjects"> <ion-icon name="document-text-outline"></ion-icon>
+        <div class="neonion" id="leftUnassignedProjects">
+          <ion-icon name="document-text-outline"></ion-icon>
           <p>Unassigned Project</p>
         </div>
-        <div class="neonion" id="leftAssignedProjects"> <ion-icon name="time-outline"></ion-icon>
+        <div class="neonion" id="leftAssignedProjects">
+          <ion-icon name="time-outline"></ion-icon>
           <p>Projects in Progress</p>
         </div>
-        <div class="neonion" id="leftVAll"> <ion-icon name="stats-chart-outline"></ion-icon>
+        <div class="neonion" id="leftVAll">
+          <ion-icon name="stats-chart-outline"></ion-icon>
           <p>Completed Projects</p>
         </div>
-        <div class="neonion" id="leftUsers"> <ion-icon name="people-sharp"></ion-icon>
+        <div class="neonion" id="leftUsers">
+          <ion-icon name="people-sharp"></ion-icon>
           <p>View Users</p>
         </div>
       </div>
@@ -47,36 +76,42 @@
             <ion-icon class="quiti" name="log-out-outline"></ion-icon>
           </div>
         </div>
-
         <div class="dashboard">Dashboard</div>
       </div>
 
       <div class="workSpace">
-
         <div class="stats">
           <div class="statsContainer 1">
-            <div class="iconStat"><ion-icon name="people-circle-outline"></ion-icon></div>
+            <div class="iconStat">
+              <ion-icon name="people-circle-outline"></ion-icon>
+            </div>
             <div class="statContent">
               <div class="statsNumber">7</div>
               <div class="statDesc">Registered Users</div>
             </div>
           </div>
           <div class="statsContainer 1">
-            <div class="iconStat"><ion-icon name="checkmark-done-outline"></ion-icon></div>
+            <div class="iconStat">
+              <ion-icon name="checkmark-done-outline"></ion-icon>
+            </div>
             <div class="statContent">
               <div class="statsNumber">20</div>
               <div class="statDesc">Completed Projects</div>
             </div>
           </div>
           <div class="statsContainer 1">
-            <div class="iconStat"><ion-icon name="hourglass-outline"></ion-icon></div>
+            <div class="iconStat">
+              <ion-icon name="hourglass-outline"></ion-icon>
+            </div>
             <div class="statContent">
               <div class="statsNumber">5</div>
               <div class="statDesc">Pending Projects</div>
             </div>
           </div>
           <div class="statsContainer 1">
-            <div class="iconStat"><ion-icon name="alert-outline"></ion-icon></div>
+            <div class="iconStat">
+              <ion-icon name="alert-outline"></ion-icon>
+            </div>
             <div class="statContent">
               <div class="statsNumber">10</div>
               <div class="statDesc">Unassigned Projects</div>
@@ -85,10 +120,12 @@
         </div>
         <div class="new">
           <div class="newP">New Project &nbsp;
-            <button class="addNew"><ion-icon name="chevron-down-circle-outline"></ion-icon></button>
+            <button class="addNew">
+              <ion-icon name="chevron-down-circle-outline"></ion-icon>
+            </button>
           </div>
           <div class="projectForm">
-            <form action="" class="formNew">
+            <form action="" class="formNew" id="projectForm">
               <div class="exit">
                 <ion-icon class="ion-exit" name="close-outline"></ion-icon>
               </div>
@@ -97,12 +134,11 @@
               <label for="description">Description</label>
               <input type="text" placeholder="Project Description" id="description" />
               <label for="startDate">Start Date</label>
-              <input type="date" />
+              <input type="date" id="startDate" />
               <label for="deadline">Deadline</label>
-              <input type="date" />
+              <input type="date" id="deadline" />
               <div class="formButton">
                 <button id="createButton" class="buttonSubmit">Create</button>
-                <!-- <button>Update</button>s -->
               </div>
             </form>
           </div>
@@ -110,7 +146,6 @@
 
         <div class="Pojects">
           <div class="newP">Unassigned Projects</div>
-
           <div class="tables">
             <table class="project-table">
               <thead>
@@ -119,6 +154,7 @@
                   <th>Description</th>
                   <th>Start Date</th>
                   <th>Deadline</th>
+                  <th class="controls">Controls</th>
                 </tr>
               </thead>
               <tbody>
@@ -127,25 +163,72 @@
                   <td>Project Description 1</td>
                   <td>2024-01-01</td>
                   <td>2024-06-01</td>
+                  <td class="tablebtn">
+                    <div class="formButton">
+                      <button id="assignButton1" class="btnAssign">Assign</button>
+                      <div class="dropdown" id="dropdown1">
+                        <a href="#">User 1</a>
+                        <a href="#">User 2</a>
+                        <a href="#">User 3</a>
+                      </div>
+                    </div>
+                    <div class="formButton">
+                      <button id="updateButton1" class="btnUpdate">Update</button>
+                    </div>
+                    <div class="formButton">
+                      <button id="deleteButton1" class="btnDelete">Delete</button>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>Project Name 2</td>
                   <td>Project Description 2</td>
                   <td>2024-01-01</td>
                   <td>2024-06-01</td>
+                  <td class="tablebtn">
+                    <div class="formButton">
+                      <button id="assignButton2" class="btnAssign">Assign</button>
+                      <div class="dropdown" id="dropdown2">
+                        <a href="#">User 1</a>
+                        <a href="#">User 2</a>
+                        <a href="#">User 3</a>
+                      </div>
+                    </div>
+                    <div class="formButton">
+                      <button id="updateButton2" class="btnUpdate">Update</button>
+                    </div>
+                    <div class="formButton">
+                      <button id="deleteButton2" class="btnDelete">Delete</button>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>Project Name 3</td>
                   <td>Project Description 3</td>
                   <td>2024-01-01</td>
                   <td>2024-06-01</td>
+                  <td class="tablebtn">
+                    <div class="formButton">
+                      <button id="assignButton3" class="btnAssign">Assign</button>
+                      <div class="dropdown" id="dropdown3">
+                        <a href="#">User 1</a>
+                        <a href="#">User 2</a>
+                        <a href="#">User 3</a>
+                      </div>
+                    </div>
+                    <div class="formButton">
+                      <button id="updateButton3" class="btnUpdate">Update</button>
+                    </div>
+                    <div class="formButton">
+                      <button id="deleteButton3" class="btnDelete">Delete</button>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div class="newP">Projects in Progress</div>
-
           <div class="tables">
             <table class="project-table">
               <thead>
@@ -257,6 +340,7 @@
   <script src="/FRONTEND/dist/admin.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>

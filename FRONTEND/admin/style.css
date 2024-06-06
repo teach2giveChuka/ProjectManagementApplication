@@ -11,12 +11,28 @@ body {
 
 .main {
   display: flex;
+  /* flex-direction: column; */
 }
 
 .left {
   height: 100vh;
   width: 15vw;
   background-color: #222831; /* Dark gray for the sidebar */
+}
+.showNav{
+  background-color:transparent;
+  position: fixed;
+  margin-top: 50px;
+  margin-left: 30px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+.showNav ion-icon{
+  color: #00FFF5;
+  width: 100%;
+  height: 100%;
 }
 
 .innerLeft {
@@ -53,6 +69,7 @@ body {
  color: #1d5654; 
   text-shadow: 0 0 5px #00FFF5, 0 0 10px #00FFF5, 0 0 15px #00FFF5;
   font-size: 45px;
+  /* background-color: #00ADB5; */
 }
 .right {
   background-color: #222831; 
@@ -133,6 +150,10 @@ body {
   background-color: #393E46; /* Dark blue background for the workspace */
   flex-direction: column;
   align-items: center;
+}
+.dashboard{
+  margin: 20px;
+  font-size: 20px;
 }
 
 .stats {
@@ -222,11 +243,15 @@ form {
 }
 
 form input {
-  padding: 10px 15px;
+  padding: 15px 20px;
   background-color: #222831; /* Neon blue for the input fields */
   color: #ffffff; /* White text */
   border: 1px solid #00FFF5;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 1px solid #00FFF5;
+  border-left: 1px solid #00FFF5;
+  margin-bottom: 15px;
 }
 
 .formButton {
@@ -306,13 +331,48 @@ form input {
    /* border-bottom: 2px solid #04969e; */
   padding: 8px;
 }
+.tablebtn{
+  width: 100%;
+  /* background-color: #000000; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.formButton .btnUpdate{
+  background-color: #06cc83;
+}
+.formButton .btnUpdate:hover{
+  background-color: #08ffa4;
+}
+.formButton .btnDelete{
+  background-color: #b62654;
+  box-shadow: 0 0 20px 2px #b62654;
+  color: white;
+}
+.formButton .btnDelete:hover{
+  background-color: #d72e64;
+  box-shadow: 0 0 20px 2px #ff6998;
+  color: white;
+}
+.btn{
+  padding: 5px;
+  background-color: #1d5654;
+}
 
 .project-table th {
   color: #ffffff; /* White text */
   text-align: left;
+  padding: 20px;
+  border-bottom: 5px solid #00ADB5;
+
 }
 
 .project-table tr:nth-child(even) {
+  /* background-color: #393E46; */
+  border-bottom: 1px solid #00ADB5;
+}
+.project-table tr:nth-child(odd) {
   /* background-color: #393E46; */
   border-bottom: 1px solid #00ADB5;
 }
@@ -320,7 +380,13 @@ form input {
 .project-table tr:hover {
   /* background-color: unset;  */
 }
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .tables{
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   /* background-color: yellow; */
@@ -332,3 +398,19 @@ form input {
   margin-top: 5px;
 }
 
+@media screen and (max-width: 1211px) {
+  .main {
+    /* background-color: #00fff5; */
+    display: flex;
+    flex-direction: column;
+  }
+  .left{
+    height: 100px;
+  }
+  .innerLeft{
+    display: none;
+  }
+  .showNav{
+    display: block;
+  }
+}

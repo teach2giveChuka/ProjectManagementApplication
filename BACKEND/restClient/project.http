@@ -1,0 +1,35 @@
+//create project :)
+###
+POST http://localhost:5000/project/create HTTP/1.1
+Content-Type: application/json
+
+{
+  "project_name": "New Project",
+  "project_description": "Description of the new project",
+  "start_date": "2024-06-10",
+  "deadline": "2024-12-31",
+  "status": true
+}
+
+//Delete
+###
+DELETE http://localhost:5000/project/delete/232ab091-4f9c-49e4-b475-dc58b3a733f4
+Host: localhost:5000
+Content-Type: application/json
+
+
+//asign project
+###
+POST http://localhost:5000/project/assign/
+Content-Type: application/json
+
+{
+  "project_id": "dc83212d-3947-4043-aab7-2c0dcd984340",
+  "id": "4d89a48d-a255-4f2a-aabb-5"
+}
+
+
+
+
+
+

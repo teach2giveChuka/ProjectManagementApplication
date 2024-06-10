@@ -2,44 +2,66 @@ import mssql from 'mssql';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
-dotenv.config();
-
 import { login_details } from '../interfaces/user';
 import { sqlConfig } from '../config/sql.config';
 
-export class authService {
+dotenv.config();
+
+export class AuthService {
 
     async login(logins: login_details) {
-        let pool = await mssql.connect(sqlConfig);
+        try {
+            const pool = await mssql.connect(sqlConfig);
+            const request = pool.request();
 
-        let user = (await pool.request()
-            .input('user_email', logins.user_email)
-            .execute('loginUser')).recordset;
+            request.input('email', mssql.VarChar(255), logins.user_email);
+            request.input('password', mssql.VarChar(255), logins.user_password);
 
-        if (user.length < 1) {
-            return {
-                message: 'user not found'
-            };
-        } else {
-            let hashedPassword = user[0].user_password;
+            const result = await request.execute('loginUser');
 
-            let passwordMatch = bcrypt.compareSync(logins.user_password, hashedPassword);
+            // Log the database result and user input
+            console.log('Database Result:', result);
 
-            if (passwordMatch) {
-                let { user_id, user_name, ...rest } = user[0];
 
-                let token = jwt.sign(rest, process.env.SECRET_KEY as string, {
-                    expiresIn: '2h'
-                });
+            console.log('User Input:', logins);
+
+
+            // If no user is found, return an error message
+            if (result.recordset.length < 1) {
+                return {
+                    message: 'User not found'
+                };
+            }
+
+            // Extract the hashed password from the user record
+            const hashedPassword = result.recordset[0].password;
+            console.log("usr hashed", bcrypt.hashSync(logins.user_password, 6));
+            // Compare the provided password with the hashed password
+            const passwordMatch = bcrypt.compareSync(logins.user_password, hashedPassword);
+            const mailmatch = logins.user_email === result.recordset[0].email
+
+            // If passwords match, generate a JWT token
+            if (mailmatch) {
+                console.log("mailmatch")
+                const { email, ...rest } = result.recordset[0];
+               
+
                 return {
                     message: 'Login successful',
-                    token
+                    // token
                 };
             } else {
+                // If passwords don't match, return an error message
                 return {
                     message: 'Incorrect password'
                 };
             }
+        } catch (error) {
+            // Catch any errors that occur during the login process
+            return {
+                message: 'Server error',
+                error
+            };
         }
     }
 }

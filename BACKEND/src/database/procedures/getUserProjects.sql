@@ -3,6 +3,6 @@ CREATE OR ALTER PROCEDURE getUserProjects
 AS
 BEGIN
     SELECT *
-    FROM Project
-    WHERE user_id = @user_id;
+    FROM Projects
+    WHERE id = @user_id;
 END;

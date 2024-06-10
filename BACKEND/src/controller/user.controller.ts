@@ -45,3 +45,17 @@ export const registerAdmin = async (req: Request, res: Response) => {
         res.status(500).json({ message: 'Server error', error });
     }
 };
+
+export const getAllUsers = async (req: Request, res: Response) => {
+    try {
+        const result = await userServiceInstance.fetchAllUsers();
+
+        if (!result) {
+            res.status(400).json(result);
+        } else {
+            res.status(200).json(result);
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error });
+    }
+};

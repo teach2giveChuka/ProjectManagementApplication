@@ -1,11 +1,12 @@
 import express from 'express';
-import { registerAdmin, registerUser } from '../controller/user.controller';
+import { registerAdmin, registerUser, getAllUsers } from '../controller/user.controller';
 import { loginUser } from '../controller/auth.controller';
 
-const user_router = express.Router();
+const userRouter = express.Router();
 
-user_router.post('/register', registerUser);
-user_router.post('/register-admin', registerAdmin);
-user_router.post('/login', loginUser);
+userRouter.post('/register', registerUser);
+userRouter.post('/register-admin', registerAdmin);
+userRouter.post('/login', loginUser);
+userRouter.get('/all', getAllUsers);
 
-export default user_router;
+export default userRouter;

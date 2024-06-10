@@ -23,11 +23,10 @@ export class userService {
             }
 
             let result = (await pool.request()
-                .input('user_id', mssql.VarChar, user_id)
-                .input('user_name', mssql.VarChar, person.user_name)
-                .input('user_email', mssql.VarChar, person.user_email)
-                .input('user_password', mssql.VarChar, hashedPassword)
-                .input('role', mssql.VarChar, role)
+                .input('id', mssql.VarChar, user_id)
+                .input('name', mssql.VarChar, person.user_name)
+                .input('email', mssql.VarChar, person.user_email)
+                .input('password', mssql.VarChar, hashedPassword)
                 .execute('registerUser')).rowsAffected;
 
             if (result[0] === 1) {

@@ -107,3 +107,45 @@ button:hover {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.message {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.success {
+  background-color: #222831;
+  box-shadow: 0 0 15px 5px #00b570;
+  color: #03ca4f;
+}
+
+.error {
+  background-color: #340e1b;
+  box-shadow: 0 0 15px 5px #fd0059;
+  color: #ffffff;
+}
+
+.slide-in {
+  opacity: 1;
+}
+
+@keyframes slide-in {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+
+

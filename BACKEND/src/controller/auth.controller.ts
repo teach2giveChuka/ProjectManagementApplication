@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import { authService } from '../services/auth.service';
+import { AuthService } from '../services/auth.service';
 import { login_details } from '../interfaces/user';
 
-const authServiceInstance = new authService();
+const authServiceInstance = new AuthService();
 
 export const loginUser = async (req: Request, res: Response) => {
     const { user_email, user_password } = req.body;
@@ -12,7 +12,7 @@ export const loginUser = async (req: Request, res: Response) => {
 
         const result = await authServiceInstance.login(logins);
 
-        if (result.message === 'Login successful') {
+        if (!result.error) {
             res.status(200).json(result);
         } else {
             res.status(400).json(result);

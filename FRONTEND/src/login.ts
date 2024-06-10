@@ -5,29 +5,29 @@ const passwordInput = document.getElementById('password') as HTMLInputElement;
 loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const username = usernameInput.value;
-    const password = passwordInput.value;
+    const user_email = usernameInput.value;
+    const user_password = passwordInput.value;
 
     clearErrorMessages();
 
-    if (!username || !password) {
-        if (!username) displayErrorMessage(usernameInput, 'Please fill in this field');
-        if (!password) displayErrorMessage(passwordInput, 'Please fill in this field');
+    if (!user_email || !user_password) {
+        if (!user_email) displayErrorMessage(usernameInput, 'Please fill in this field');
+        if (!user_password) displayErrorMessage(passwordInput, 'Please fill in this field');
         return;
     }
 
     try {
-        const response = await fetch('/api/login', {
+        const response = await fetch('http://localhost:5000/user/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ user_email, user_password }),
         });
 
         if (response.ok) {
             alert('Login successful!');
-            window.location.href = '/dashboard.html';
+            window.location.href = './user/user.html';
         } else {
             const errorData = await response.json();
             displayErrorMessage(passwordInput, errorData.message || 'Invalid username or password');

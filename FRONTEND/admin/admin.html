@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,14 +27,12 @@
     }
   </style>
 </head>
-
 <body>
   <div class="main">
     <div class="left">
       <button class="showNav"><ion-icon name="reorder-four-outline"></ion-icon></button>
       <div class="innerLeft">
         <h1 class="leftAdmin">SUDO</h1>
-
         <div class="neonion" id="dashboard">
           <ion-icon name="list-outline"></ion-icon>
           <p>Dashboard</p>
@@ -145,7 +142,7 @@
         </div>
 
         <div class="Pojects">
-          <div class="newP">Unassigned Projects</div>
+          <div class="newP">Projects</div>
           <div class="tables">
             <table class="project-table">
               <thead>
@@ -157,145 +154,15 @@
                   <th class="controls">Controls</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Project Name 1</td>
-                  <td>Project Description 1</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                  <td class="tablebtn">
-                    <div class="formButton">
-                      <button id="assignButton1" class="btnAssign">Assign</button>
-                      <div class="dropdown" id="dropdown1">
-                        <a href="#">User 1</a>
-                        <a href="#">User 2</a>
-                        <a href="#">User 3</a>
-                      </div>
-                    </div>
-                    <div class="formButton">
-                      <button id="updateButton1" class="btnUpdate">Update</button>
-                    </div>
-                    <div class="formButton">
-                      <button id="deleteButton1" class="btnDelete">Delete</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Project Name 2</td>
-                  <td>Project Description 2</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                  <td class="tablebtn">
-                    <div class="formButton">
-                      <button id="assignButton2" class="btnAssign">Assign</button>
-                      <div class="dropdown" id="dropdown2">
-                        <a href="#">User 1</a>
-                        <a href="#">User 2</a>
-                        <a href="#">User 3</a>
-                      </div>
-                    </div>
-                    <div class="formButton">
-                      <button id="updateButton2" class="btnUpdate">Update</button>
-                    </div>
-                    <div class="formButton">
-                      <button id="deleteButton2" class="btnDelete">Delete</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Project Name 3</td>
-                  <td>Project Description 3</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                  <td class="tablebtn">
-                    <div class="formButton">
-                      <button id="assignButton3" class="btnAssign">Assign</button>
-                      <div class="dropdown" id="dropdown3">
-                        <a href="#">User 1</a>
-                        <a href="#">User 2</a>
-                        <a href="#">User 3</a>
-                      </div>
-                    </div>
-                    <div class="formButton">
-                      <button id="updateButton3" class="btnUpdate">Update</button>
-                    </div>
-                    <div class="formButton">
-                      <button id="deleteButton3" class="btnDelete">Delete</button>
-                    </div>
-                  </td>
-                </tr>
+              <tbody id="ProjectsTableBody">
+                <!-- Unassigned projects will be dynamically inserted here -->
+                <select class="usersSelect" id="freeUsersDropdown" style="display: none;">
+                  <option value="">Select User To Assign</option>
+                </select>
               </tbody>
+              
             </table>
           </div>
-
-          <div class="newP">Projects in Progress</div>
-          <div class="tables">
-            <table class="project-table">
-              <thead>
-                <tr>
-                  <th>Project Name</th>
-                  <th>Description</th>
-                  <th>Start Date</th>
-                  <th>Deadline</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Project Name 1</td>
-                  <td>Project Description 1</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                </tr>
-                <tr>
-                  <td>Project Name 2</td>
-                  <td>Project Description 2</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                </tr>
-                <tr>
-                  <td>Project Name 3</td>
-                  <td>Project Description 3</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="newP">Completed Projects</div>
-          <div class="tables">
-            <table class="project-table">
-              <thead>
-                <tr>
-                  <th>Project Name</th>
-                  <th>Description</th>
-                  <th>Start Date</th>
-                  <th>Deadline</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Project Name 1</td>
-                  <td>Project Description 1</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                </tr>
-                <tr>
-                  <td>Project Name 2</td>
-                  <td>Project Description 2</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                </tr>
-                <tr>
-                  <td>Project Name 3</td>
-                  <td>Project Description 3</td>
-                  <td>2024-01-01</td>
-                  <td>2024-06-01</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
 
         <div class="Users">
           <div class="newP">Users</div>
@@ -309,25 +176,8 @@
                   <th>Date Joined</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>User 1</td>
-                  <td>user1@example.com</td>
-                  <td>Admin</td>
-                  <td>2024-01-01</td>
-                </tr>
-                <tr>
-                  <td>User 2</td>
-                  <td>user2@example.com</td>
-                  <td>Manager</td>
-                  <td>2024-01-15</td>
-                </tr>
-                <tr>
-                  <td>User 3</td>
-                  <td>user3@example.com</td>
-                  <td>Employee</td>
-                  <td>2024-02-01</td>
-                </tr>
+              <tbody id="userTableBody">
+                <!-- Users will be dynamically inserted here -->
               </tbody>
             </table>
           </div>
@@ -337,10 +187,11 @@
     </div>
   </div>
 
+  
+
   <script src="/FRONTEND/dist/admin.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
-
 </html>

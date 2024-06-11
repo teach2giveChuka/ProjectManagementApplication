@@ -156,6 +156,29 @@ body {
   font-size: 20px;
 }
 
+.usersSelect{
+margin-top: -30px;
+  padding: 5px;
+  position: absolute;
+  display: none;
+  background-color: #7e848f; 
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px #00FFF5; 
+  z-index: 100; 
+}
+
+.usersSelect a {
+  display: block;
+  padding: 8px 16px;
+  color: #00FFF5; /* Neon turquoise text */
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.usersSelect a:hover {
+  background-color: #ffffff; /* Dark blue background on hover */
+}
+
 .stats {
   background-color: #393E46; /* Dark gray for the stats section */
   display: flex;

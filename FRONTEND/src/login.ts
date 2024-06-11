@@ -24,11 +24,13 @@ loginForm.addEventListener('submit', async (event) => {
             },
             body: JSON.stringify({ user_email, user_password }),
         });
-
         if (response.ok) {
-            alert('Login successful!');
+            localStorage.clear();
+            localStorage.setItem('user_email', user_email);
+            console.log('Local Storage:', localStorage); // Debugging statement
             window.location.href = './user/user.html';
-        } else {
+        }
+        else {
             const errorData = await response.json();
             displayErrorMessage(passwordInput, errorData.message || 'Invalid username or password');
         }

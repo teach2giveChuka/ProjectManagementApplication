@@ -38,19 +38,61 @@ export class ProjectService {
 
   async assignProjectToUser(projectId: string, userId: string): Promise<void> {
     try {
-      let pool = await mssql.connect(sqlConfig);
+      const pool = await mssql.connect(sqlConfig);
       const request = pool.request();
-      request.input('project_id', mssql.VarChar(255), projectId);
-      request.input('id', mssql.VarChar(255), userId);
 
-      console.log("user input", userId, projectId)
+      // Input validation
+      if (!projectId || !userId) {
+        throw new Error('Invalid project ID or user ID');
+      }
 
-      await request.execute('assignProjectToUser');
+      // Input logging
+      console.log('Assigning project:', projectId, 'to user:', userId);
+
+      // Execute stored procedure
+      const result = await request.input('project_id', mssql.VarChar(255), projectId)
+        .input('id', mssql.VarChar(255), userId)
+        .execute('assignProjectToUser');
+
+      // Check for successful execution
+      if (!result || !result.recordset || result.recordset.length === 0) {
+        throw new Error('No response from database');
+      }
+
+      // Log success
+      console.log('Project assigned successfully to user');
     } catch (err) {
       console.error('SQL error', err);
       throw err;
     }
   }
+
+  async getAllProjects(): Promise<Project[]> {
+    try {
+      let pool = await mssql.connect(sqlConfig);
+      const request = pool.request();
+
+      const result = await request.execute('getAllProjects');
+      return result.recordset as Project[];
+    } catch (err) {
+      console.error('SQL error', err);
+      throw err;
+    }
+  }
+
+  async getAllFreeUsers(): Promise<{ id: string, name: string, email: string }[]> {
+    try {
+      let pool = await mssql.connect(sqlConfig);
+      const request = pool.request();
+
+      const result = await request.execute('getAllFreeUsers');
+      return result.recordset as { id: string, name: string, email: string }[];
+    } catch (err) {
+      console.error('SQL error', err);
+      throw err;
+    }
+  }
+ 
 
 }
 

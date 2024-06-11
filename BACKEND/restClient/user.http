@@ -9,24 +9,6 @@ Content-Type: application/json
 }
 
 
-###loggin
-POST http://localhost:5000/user/login HTTP/1.1
-Content-Type: application/json
-
-{
- "user_email": "mark@example.com",
-  "user_password": "marko"
-
-}
-
-
-
-
-
-
-
-
-
 
 
 ### Get All Users
@@ -41,19 +23,7 @@ Content-Type: application/json
 
 {
 "user_email": "man@example.com",
-  "user_password": "securepassword"}
+  "user_password": "securepassword"
+  }
 
 
-
-
-
-###registerAdmin
-POST http://localhost:5000/user/register-admin
-
-Content-Type: application/json
-
-{
-  "username": "admin123",
-  "email": "admin@example.com",
-  "password": "password123"
-}

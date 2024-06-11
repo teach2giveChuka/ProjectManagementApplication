@@ -6,4 +6,7 @@ BEGIN
     UPDATE Projects
     SET id = @id
     WHERE project_id = @project_id;
+
+    SELECT * FROM Projects WHERE project_id = @project_id
+
 END;

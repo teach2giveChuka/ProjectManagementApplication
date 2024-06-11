@@ -32,7 +32,9 @@ loginForm.addEventListener('submit', (event) => __awaiter(void 0, void 0, void 0
             body: JSON.stringify({ user_email, user_password }),
         });
         if (response.ok) {
-            alert('Login successful!');
+            localStorage.clear();
+            localStorage.setItem('user_email', user_email);
+            console.log('Local Storage:', localStorage); // Debugging statement
             window.location.href = './user/user.html';
         }
         else {

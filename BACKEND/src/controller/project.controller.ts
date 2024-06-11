@@ -35,13 +35,32 @@ export const deleteProject = async (req: Request, res: Response): Promise<void> 
 
 export const assignProjectToUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const projectId = req.params.project_id;
-    const userId = req.params.user_id; // Assuming you have the user ID in the request
+    const { project_id, user_id } = req.body;
 
-    await projectService.assignProjectToUser(projectId, userId);
+    await projectService.assignProjectToUser(project_id, user_id);
     res.status(200).send({ message: 'Project assigned to user successfully' });
   } catch (error) {
     console.error('Error assigning project to user:', error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+};
+
+export const getAllProjects = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const projects = await projectService.getAllProjects();
+    res.status(200).send(projects);
+  } catch (error) {
+    console.error('Error fetching projects:', error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+};
+
+export const getAllFreeUsers = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const freeUsers = await projectService.getAllFreeUsers();
+    res.status(200).send(freeUsers);
+  } catch (error) {
+    console.error('Error fetching free users:', error);
     res.status(500).send({ message: 'Internal Server Error' });
   }
 };

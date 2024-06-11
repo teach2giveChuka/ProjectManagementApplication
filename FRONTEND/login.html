@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="./styles/login.css">
 </head>
+
 <body>
     <div class="login-container">
         <h2>Welcome Back!</h2>
+        <a href="index.html" style="position: absolute; top: 10px; right: 10px ;cursor: pointer"><ion-icon
+                style="width: 24px; height: 24px; color: rgb(9, 153, 117);" name="home-outline"></ion-icon></a>
         <form id="loginForm">
             <div class="input-group">
                 <input type="email" id="username" name="username" placeholder="email">
@@ -25,10 +29,14 @@
                 <a href="reset.html" class="forgot-password">Forgot Password?</a>
             </div>
         </form>
+        <div class="feedback-container" id="feedbackContainer"></div>
         <div class="extra-options">
-          <span>Do not have an account? <a href="register.html">Register here</a></span>
-      </div>
+            <span>Do not have an account? <a href="register.html">Register here</a></span>
+        </div>
     </div>
     <script src="./dist/login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

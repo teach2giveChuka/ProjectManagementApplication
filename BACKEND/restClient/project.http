@@ -11,6 +11,13 @@ Content-Type: application/json
   "status": true
 }
 
+//all Projects
+###
+GET http://localhost:5000/project/projects HTTP/1.1
+
+
+
+
 //Delete
 ###
 DELETE http://localhost:5000/project/delete/232ab091-4f9c-49e4-b475-dc58b3a733f4
@@ -24,9 +31,15 @@ POST http://localhost:5000/project/assign/
 Content-Type: application/json
 
 {
-  "project_id": "dc83212d-3947-4043-aab7-2c0dcd984340",
-  "id": "4d89a48d-a255-4f2a-aabb-5"
+  "project_id": "5",
+  "user_id": "4d89a48d-a255-4f2a-aabb-5"
 }
+
+
+
+
+###
+GET http://localhost:5000/project/free-users HTTP/1.1
 
 
 

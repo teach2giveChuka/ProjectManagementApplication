@@ -24,8 +24,8 @@ POST http://localhost:5000/project/assign/
 Content-Type: application/json
 
 {
-  "project_id": "dc83212d-3947-4043-aab7-2c0dcd984340",
-  "id": "4d89a48d-a255-4f2a-aabb-5"
+  "project_id": "8a87933c-579a-4b24-b3ed-9b5a53fb85d5",
+  "id": "626ff81b-7703-4a17-8a0e-15a3a022a043"
 }
 
 

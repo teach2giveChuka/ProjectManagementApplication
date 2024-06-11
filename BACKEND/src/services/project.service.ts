@@ -7,8 +7,9 @@ export class ProjectService {
   async createProject(project: Project): Promise<void> {
     try {
       let pool = await mssql.connect(sqlConfig);
+      let project_id = uuidv4();
       const request = pool.request();
-      request.input('project_id', mssql.VarChar(255), uuidv4());
+      request.input('project_id', project_id);
       request.input('project_name', mssql.VarChar(255), project.project_name);
       request.input('project_description', mssql.VarChar(255), project.project_description);
       request.input('start_date', mssql.Date, new Date(project.start_date));
@@ -16,6 +17,8 @@ export class ProjectService {
       request.input('status', mssql.Bit, project.status);
 
       await request.execute('createProject');
+      console.log(project_id);
+      
     } catch (err) {
       console.error('SQL error', err);
       throw err;

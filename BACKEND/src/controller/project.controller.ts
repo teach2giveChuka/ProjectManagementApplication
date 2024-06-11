@@ -24,6 +24,8 @@ export const createProject = async (req: Request, res: Response): Promise<void> 
 export const deleteProject = async (req: Request, res: Response): Promise<void> => {
   try {
     const projectId = req.params.project_id;
+    console.log(projectId);
+    
 
     await projectService.deleteProject(projectId);
     res.status(200).send({ message: 'Project deleted successfully' });

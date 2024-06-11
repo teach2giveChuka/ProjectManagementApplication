@@ -7,3 +7,6 @@ CREATE TABLE Projects (
   status BIT NOT NULL,
   id VARCHAR(255) 
 );
+
+
+SELECT * FROM Projects

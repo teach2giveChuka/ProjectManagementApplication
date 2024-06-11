@@ -31,8 +31,13 @@ POST http://localhost:5000/project/assign/
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
   "project_id": "5",
   "user_id": "4d89a48d-a255-4f2a-aabb-5"
+=======
+  "project_id": "8a87933c-579a-4b24-b3ed-9b5a53fb85d5",
+  "id": "626ff81b-7703-4a17-8a0e-15a3a022a043"
+>>>>>>> fb6885b23bfa5c027a92e2fe869fd160846f2719
 }
 
 

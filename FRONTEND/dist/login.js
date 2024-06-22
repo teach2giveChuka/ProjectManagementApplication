@@ -13,27 +13,27 @@ const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 loginForm.addEventListener('submit', (event) => __awaiter(void 0, void 0, void 0, function* () {
     event.preventDefault();
-    const username = usernameInput.value;
-    const password = passwordInput.value;
+    const user_email = usernameInput.value;
+    const user_password = passwordInput.value;
     clearErrorMessages();
-    if (!username || !password) {
-        if (!username)
+    if (!user_email || !user_password) {
+        if (!user_email)
             displayErrorMessage(usernameInput, 'Please fill in this field');
-        if (!password)
+        if (!user_password)
             displayErrorMessage(passwordInput, 'Please fill in this field');
         return;
     }
     try {
-        const response = yield fetch('/api/login', {
+        const response = yield fetch('http://localhost:5000/user/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ user_email, user_password }),
         });
         if (response.ok) {
             alert('Login successful!');
-            window.location.href = '/dashboard.html';
+            window.location.href = './user/user.html';
         }
         else {
             const errorData = yield response.json();

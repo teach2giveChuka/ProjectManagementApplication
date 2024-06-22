@@ -210,7 +210,7 @@ body {
   align-items: center;
 }
 
-.taskDEtails, .taskProgress, .dOneTasks{
+.taskDetails, .taskProgress, .dOneTasks{
   height: 400px;
   width: 350px;
   background-color: #222831;
@@ -218,11 +218,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
  
 }
-.taskDEtails{
+.taskDetails{
   /* background-color: #00FFF5; */
-  justify-content: space-around;
+  display: flex;
+  /* justify-content: space-around; */
  
 }
 .det{
@@ -405,6 +407,8 @@ margin-right: 90%;
 
 .workSpace {
   padding-top: 20px;
+  width: 100;
+
 }
 
 .stats {
@@ -436,13 +440,13 @@ margin-right: 90%;
   height: auto;
 }
 
-.taskDEtails{
+.taskDetails{
   gap: 10px;
   border-radius: 5px;
  
 }
 
-.taskDEtails, .taskProgress, .dOneTasks {
+.taskDetails, .taskProgress, .dOneTasks {
   width: 90%;
   height: auto;
   margin-bottom: 20px;
@@ -576,12 +580,12 @@ margin-right: 90%;
   height: auto;
 }
 
-.taskDEtails {
+.taskDetails {
   gap: 10px;
   border-radius: 5px;
 }
 
-.taskDEtails, .taskProgress, .dOneTasks {
+.taskDetails, .taskProgress, .dOneTasks {
   width: 90%;
   height: auto;
   margin-bottom: 20px;
@@ -615,6 +619,9 @@ margin-right: 90%;
   padding: 10px;
   gap: 10px;
   font-size: 14px;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .neonion {
@@ -641,12 +648,13 @@ margin-right: 90%;
   width: 100%;
   background-color: #222831;
   padding: 10px 0;
+  margin-top: 100px;
 }
 
 .right {
   margin-left: 0;
   margin-top: 10px;
-  width: 100%;
+  width: 1000px;
 }
 
 .innerRight {
@@ -701,7 +709,7 @@ margin-right: 90%;
 }
 
 .statsContainer {
-  width: 85%;
+  width: 70%;
   height: auto;
   padding: 10px;
   margin-bottom: 20px;
@@ -723,12 +731,12 @@ margin-right: 90%;
   height: auto;
 }
 
-.taskDEtails {
+.taskDetails {
   gap: 10px;
  
 }
 
-.taskDEtails, .taskProgress, .dOneTasks {
+.taskDetails, .taskProgress, .dOneTasks {
   width: 90%;
   height: auto;
   margin-bottom: 20px;
@@ -748,4 +756,13 @@ margin-right: 90%;
 .project-table {
   width: 100%;
 }
+}
+
+@media screen and (max-width:320px){
+  .statContent{
+    gap: 15px;
+    font-size: 15px;
+  }
+
+
 }
